@@ -9,7 +9,7 @@ import { ENTITIES } from '@db/entities';
     TypeOrmModule.forRootAsync({
       useFactory: () => ({
         type: 'better-sqlite3',
-        database: ':memory:',
+        database: "db/sql",
         synchronize: true,
         logging: false,
         entities: [...ENTITIES],

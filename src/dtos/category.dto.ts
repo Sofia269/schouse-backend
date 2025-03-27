@@ -1,7 +1,7 @@
 import {
   IsString,
   IsNotEmpty,
-  IsUrl,
+  // IsUrl,
   IsNumber,
   IsOptional,
 } from 'class-validator';
@@ -17,7 +17,7 @@ export class CreateCategoryDto {
   name: string;
 
   @ApiProperty()
-  @IsUrl()
+  // @IsUrl()
   @IsNotEmpty()
   @Field()
   image: string;
@@ -32,7 +32,7 @@ export class UpdateCategoryDto {
   name: string;
 
   @ApiProperty()
-  @IsUrl()
+  // @IsUrl()
   @IsOptional()
   @Field({ nullable: true })
   image: string;

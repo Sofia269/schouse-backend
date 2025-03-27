@@ -7,7 +7,7 @@ import {
   IsArray,
   Min,
   ValidateIf,
-  IsUrl,
+  // IsUrl,
   ArrayMinSize,
 } from 'class-validator';
 import { Field, InputType, ArgsType, Int } from '@nestjs/graphql';
@@ -41,7 +41,7 @@ export class CreateProductDto {
 
   @ApiProperty()
   @IsArray()
-  @IsUrl({}, { each: true })
+  // @IsUrl({}, { each: true })
   @IsNotEmpty()
   @ArrayMinSize(1)
   @Field(() => [String])
@@ -76,7 +76,7 @@ export class UpdateProductDto {
 
   @ApiProperty()
   @IsArray()
-  @IsUrl({}, { each: true })
+  // @IsUrl({}, { each: true })
   @IsOptional()
   @ArrayMinSize(1)
   @Field(() => [String], { nullable: true })
